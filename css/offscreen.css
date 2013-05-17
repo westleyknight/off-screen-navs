@@ -1,0 +1,230 @@
+/* Base Styling */	
+
+	.container {
+		overflow: hidden;
+		position: relative;
+	}
+
+	header {
+		background: #ddd;
+		padding-bottom: 0.5em;
+		padding-top: 0.5em;
+		position: relative;
+		text-align: center;
+	}
+
+	h1 {
+		margin: 0 1.5em;
+	}    
+
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	nav li {
+		display: inline;
+	}
+
+	nav a {
+		margin: 0 0.5em;
+	}
+
+	.off-screen-nav {
+		display: none;
+	} 
+
+	#contact {
+		background: #ddd;
+		padding-bottom: 1em;
+		padding-top: 1em;
+	}
+
+	#main {
+		margin: 0 auto;
+		max-width: 45em;
+		padding: 0 2em;
+	}
+
+/* Contact Form Layout */
+
+	#contact {
+		overflow: hidden;
+	}
+
+	#contact legend {
+		font-weight: bold;
+		margin: 1em 0;
+	}
+
+	#contact label,
+	#contact input[type=text],
+	#contact textarea {
+		clear: left;
+		float: left;
+		margin: 0;
+	}
+
+	#contact input[type=text] {
+		margin-bottom: 1em;
+	}
+
+	#contact textarea {
+		width: 90%;
+	}
+
+	#contact input[type=submit] {
+		background: #333;
+		border: none;
+		border-radius: 0.3em;
+		color: #fff;
+		clear: both;
+		float: right;
+		margin: 1em 0;
+		padding: 0.3em 1em;
+	}
+
+/* Contact form styling for 'on screen' layout */
+
+	@media screen and (min-width: 600px){
+
+		#contact {
+			margin: 0 auto;
+			max-width: 45em;
+		}
+
+		#contact legend,
+		#contact label,
+		#contact input[type=text],
+		#contact textarea,
+		#contact input[type=submit] {
+			margin-left: 2em;
+			margin-right: 2em;
+		}
+	}
+
+/* Styling for off screen elements */
+
+	@media screen and (max-width: 600px){
+		
+		.js .off-screen-nav {
+			display: inherit;
+		}
+		
+		.js .off-screen-nav li {
+			font-size: 1.75em;
+		}
+		
+		.js .off-screen-nav a:link,
+		.js .off-screen-nav a:visited {
+			color: #333;
+			text-decoration: none;
+		}
+
+		/* Off screen nav buttons posiitoning */
+
+			.js .nav-item,
+			.js .contact-item {
+				position: absolute;
+				top: 0.4em;
+			}
+			.js .nav-item {
+				left: 0em;
+			}
+			.js .contact-item {
+				right: 0em;
+			}
+
+		/* Off screen nav positioning */
+
+			.js #nav {
+				background: #333;
+				float: left;
+				margin-left: -90%;
+				width: 90%;
+			}
+
+				.js #nav ul {
+					margin: 0;
+				}
+
+				.js #nav li {
+					border-bottom: 1px solid #444;
+					display: block;
+				}
+
+				.js #nav a {
+					border-bottom: 1px solid #222;
+					color: #fff;
+					display: block;
+					margin: 0;
+					padding: 0.5em 1em;
+					text-decoration: none;
+				}
+
+		/* Off screen contact positioning */
+
+			.js #contact {
+				background: #333;
+				color: #fff;
+				float: right;
+				margin-right: -90%;
+				width: 90%;
+			}
+
+				.js #contact legend,
+				.js #contact label,
+				.js #contact input,
+				.js #contact textarea {
+					margin-left: 1em;
+					margin-right: 1em;
+				}
+
+				.js #contact label,
+				.js #contact input {
+					float: left;
+				}
+				.js #contact label {
+					clear: left;
+				}
+
+				.js #contact input[type=submit] {
+					background: #ddd;
+					color: #333;
+				}
+
+		/* Navigation active positioning */
+
+			.active-nav #nav {
+				margin-left: 0;
+			}
+
+			.active-nav #off-screen-container {
+				margin-left: 90%;
+				width: 100%;
+			}
+
+			.active-nav #contact {
+				margin-right: -180%;
+				
+			}
+
+		/* Contact active positioning */
+
+			.active-contact #nav {
+				margin-left: -180%;
+			}
+
+			.active-contact #off-screen-container {
+				margin-left: -90%;
+				width: 100%;
+			}
+
+			.active-contact #contact {
+				margin-right: 0%;
+				
+			}
+
+	}
+
+
