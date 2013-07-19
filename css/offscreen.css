@@ -106,6 +106,10 @@
 /* Styling for off screen elements */
 
 	@media screen and (max-width: 600px){
+
+		.forkribbon {
+			display: none;
+		}
 		
 		.js .off-screen-nav {
 			display: inherit;
